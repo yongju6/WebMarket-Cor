@@ -26,7 +26,7 @@
 	</div>
 	
 	<div class="container">
-		<form action="<%= PRODUCT_ADD_PROCESS_PAGE_URL %>" class="form-horizontal" method="POST">
+		<form action="<%= PRODUCT_ADD_PROCESS_PAGE_URL %>" class="form-horizontal" method="POST" enctype="multipart/form-data">
 			<div class="form-group row">
 				<label class="col-sm-2">상품 코드</label>
 				<div class="col-sm-3">
@@ -83,6 +83,14 @@
 					<label><input type="radio" name="condition" value="old">중고제품</label>
 					<label><input type="radio" name="condition" value="refurbished">리퍼제품</label>
 				</div>
+			</div>
+			
+			<div class="form-group row">
+				<label class="col-sm-2"></label>
+				<div class="col-sm-5">
+					<input type ="file" name="productImage" class="form-control">
+				</div>
+				
 			</div>
 			
 			<div class="form-group row">
