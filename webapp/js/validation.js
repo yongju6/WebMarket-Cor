@@ -22,13 +22,13 @@ function checkAddProduct(){
 		return false;
 	} // end if - name
 	
-	if(unitPrice.value.length == 0 || inNaN(unitPrice.value)){
+	if(unitPrice.value.length == 0 || isNaN(unitPrice.value)){
 		alert("[가격]\n 숫자만 입력하세요.");
 		unitPrice.focus();
 		return false;
 	} // end if - unitPrice
 	
-	if(isNaN(unitsInStock.vlaue)){
+	if(isNaN(unitsInStock.value)){
 		alert("[재고]\n 숫자만 입력하세요.");
 		unitsInStock.focus();
 		return false;
