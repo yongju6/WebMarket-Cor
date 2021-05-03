@@ -14,7 +14,10 @@ public class Product implements Serializable {
 	private long unitsInStock; 		// 재고
 	private String condition; 		// 새제품 or 중고 or 리퍼비시
 	private String imagePath; 		// 이미지 파일 경로
+	private int quantity;			// 장바구니에 담은 물건 개수
 	
+	
+
 	public Product(String productId, String name, int unitPrice) {
 		setProductId(productId);
 		setName(name);
@@ -22,7 +25,7 @@ public class Product implements Serializable {
 	}
 	
 	public Product(String productId, String name, String unitPrice, String description, String manufacturer, 
-			String category, String unitsInStock, String conditionm, String imagePath) {
+			String category, String unitsInStock, String condition, String imagePath) {
 		this.productId = productId;
 		this.name = name;
 		this.unitPrice = Integer.parseInt(unitPrice);
@@ -33,7 +36,14 @@ public class Product implements Serializable {
 		this.condition = condition;
 		this.imagePath = imagePath;
 	}
+	public int getQuantity() {
+		return quantity;
+	}
 
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	
 	public String getProductId() {
 		return productId;
 	}
